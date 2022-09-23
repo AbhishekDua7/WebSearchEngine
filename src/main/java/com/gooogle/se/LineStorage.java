@@ -12,7 +12,7 @@ public class LineStorage {
 
     @PostMapping(value = "query/saveInput")
     public String saveInput(@RequestBody String userInput) {
-        userInputLines = Utilities.parseInput(userInput);
+        userInputLines = Utilities.readInput(userInput);
         Utilities.storeLogs("src/output/input.txt", userInputLines);
         return userInput;
     }

@@ -13,13 +13,13 @@ public class CircularShift {
 
     @PostMapping(value = "query/getCircularShiftedLine")
     public CircularShiftResponse getCircularShifts(@RequestBody String userInput) {
-        List<Line> userInputLines = Utilities.parseInput(userInput);
-        List<CircularShiftedLine> circularShiftedLines = transformShifts(userInputLines);
+        List<Line> userInputLines = Utilities.readInput(userInput);
+        List<CircularShiftedLine> circularShiftedLines = genCS(userInputLines);
         Utilities.storeLogsForCircularShiftedLines("src/output/CircularShiftsLog.txt", circularShiftedLines);
         return new CircularShiftResponse(circularShiftedLines);
     }
 
-    private List<CircularShiftedLine> transformShifts(List<Line> lines) {
+    private List<CircularShiftedLine> genCS(List<Line> lines) {
         List<CircularShiftedLine> shiftedLines = new ArrayList<>();
         for (Line line: lines) {
             shiftedLines.add(new CircularShiftedLine(line));

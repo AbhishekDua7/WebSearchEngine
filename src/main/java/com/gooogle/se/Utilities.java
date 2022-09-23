@@ -8,7 +8,7 @@ import java.util.List;
 
 public class Utilities {
 
-    public static List<Line> parseInput(String input) {
+    public static List<Line> readInput(String input) {
         String[] userInputQueries = input.split("\n");
         List<Line> userInputLines = new ArrayList<>();
         for (String userInput : userInputQueries) {
