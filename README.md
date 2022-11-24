@@ -30,7 +30,7 @@ mvn clean spring-boot:run
 
 Once the spring boot tomcat is started
 
-Open the `/src/main/resources/static/index.html`
+Open the `/src/main/resources/static/index2.html`
 
 Post performing the action on the page you can see the logs/response stored under the directory
 `/src/output/` as `.txt` files.
