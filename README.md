@@ -47,7 +47,7 @@ tsc app.ts
 - Alternatively you can test api for Java using postman tool. 
   - Download the postman tool.
   - Create a new post request
-  - Add the api for e.g. http://localhost:8080/query/saveInput  . Here saveInput is the api we are testing.
+  - Add the api for e.g. http://localhost:8080/query/search/and  . Here search is the api we are testing.
   - In the body tab of postman add the required text. The setting will be set to raw. (Text)
   - Hit Send button.
 

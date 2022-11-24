@@ -1,6 +1,6 @@
 package com.gooogle.se;
 
-import com.gooogle.se.GooogleSearchEngine;
+import com.gooogle.se.kwic.GooogleSearchEngine;
 import org.springframework.boot.builder.SpringApplicationBuilder;
 import org.springframework.boot.web.servlet.support.SpringBootServletInitializer;
 

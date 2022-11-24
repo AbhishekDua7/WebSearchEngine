@@ -1,5 +1,7 @@
 package com.gooogle.se;
 
+import com.gooogle.se.kwic.CircularShiftedLine;
+import com.gooogle.se.kwic.Line;
 import java.io.BufferedWriter;
 import java.io.File;
 import java.io.FileWriter;
@@ -7,7 +9,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Utilities {
-
+    public static boolean disableStorage = false;
     public static List<Line> readInput(String input) {
         String[] userInputQueries = input.split("\n");
         List<Line> userInputLines = new ArrayList<>();
@@ -25,6 +27,7 @@ public class Utilities {
 
 
     public static void storeLogs(String path, List<Line> inputLines) {
+        if (disableStorage) return;
         try {
             File inputFile = new File(path);
             if (!inputFile.exists() && !inputFile.createNewFile()) {
@@ -45,6 +48,7 @@ public class Utilities {
     }
 
     public static void storeLogsForCircularShiftedLines(String path, List<CircularShiftedLine> inputLinesList) {
+        if (disableStorage) return;
         try {
             File inputFile = new File(path);
             if (!inputFile.exists() && !inputFile.createNewFile()) {
