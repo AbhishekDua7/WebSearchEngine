@@ -25,6 +25,10 @@ window.onload = function() {
     getSearchResults(kwicData, data['operator'])
 }
 
+function loadHomePage() {
+    location.assign("index2.html");
+}
+
 function loadInput(data){
     let fixedSearch = <HTMLInputElement>document.getElementById('fixedUserSearch');
     if(data['search']) {

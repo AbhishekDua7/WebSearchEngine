@@ -49,6 +49,9 @@ window.onload = function () {
     var kwicData = data['KWIC'].replaceAll(",", "\n");
     getSearchResults(kwicData, data['operator']);
 };
+function loadHomePage() {
+    location.assign("index2.html");
+}
 function loadInput(data) {
     var fixedSearch = document.getElementById('fixedUserSearch');
     if (data['search']) {
